@@ -44,34 +44,16 @@ graph TD
     E --> B; // Loop back to AI Agent with tool output for further reasoning
     C -- Final Answer --> F[Comprehensive Travel Plan];
     F --> A; // Sent back to User (Streamlit)
-Core Components:
-
-Agent Module (agent/): Orchestrates the planning workflow using LangGraph. This is where the AI's reasoning and tool orchestration logic resides.
-
-Tools Module (tools/): Contains specialized Python tools for interacting with external APIs and performing calculations. Each tool is implemented as a StructuredTool class for robust integration.
-
-Web Interface: Comprises a FastAPI backend (main.py) for the core API and AI processing, and a Streamlit frontend (streamlit_app.py) for the user-friendly web interface.
-
-Prompt Library (prompt_library/): Stores system prompts and instructions that guide the LLM's behavior and response generation.
-
-Utilities (utils/): (As described in the original Ai_Trip_Planner project, if you've implemented these or intend to) Helper functions for data processing, API integrations, etc.
-
-Configuration (config/): (As described in the original Ai_Trip_Planner project) For application-wide settings.
-
-Error Handling (exception/): (As described in the original Ai_Trip_Planner project) For centralized error management.
-
-Logging (logger/): (As described in the original Ai_Trip_Planner project) For application logging.
-
 🛠️ Available Tools
 The AI agent is equipped with a suite of specialized tools to fulfill diverse planning needs:
 
-🌤️ Weather Information:
-
+**🌤️ Weather Information:
+**
 get_current_weather: Real-time temperature, conditions, and descriptions for a location.
 
 get_weather_forecast: 5-day weather predictions for trip planning. (Always 5 days as simplified for robustness).
 
-🏛️ Place Search & Discovery (via Google Places API):
+**🏛️ Place Search & Discovery (via Google Places API):**
 
 search_places_of_interest: Find popular tourist spots, landmarks, and hidden gems.
 
@@ -79,7 +61,7 @@ search_restaurants: Discover dining options with price ranges.
 
 search_accommodations: Find hotels, hostels, and other lodging options.
 
-💰 Financial Planning:
+**💰 Financial Planning:**
 
 calculate_total_cost: Sums up a list of individual costs for trip expenses.
 
@@ -87,14 +69,14 @@ calculate_hotel_cost: Estimates total accommodation costs based on per-night pri
 
 calculate_daily_budget: Divides a total budget by the number of days to get a daily allowance.
 
-💱 Currency Conversion (via ExchangeRate-API):
+**💱 Currency Conversion (via ExchangeRate-API):**
 
 convert_currency: Provides real-time exchange rates to convert amounts between different currencies.
 
-🚀 Quick Start
+**🚀 Quick Start
 Follow these steps to get GlobalGuide AI up and running on your local machine.
 
-Prerequisites
+Prerequisites**
 Python 3.10 or higher
 
 API keys for external services: You'll need keys for Groq, OpenWeatherMap, Google Places, and ExchangeRate-API. (See Configuration below for details).
@@ -209,10 +191,10 @@ Enhancing Agent Reasoning: Refine prompts and LangGraph nodes for more sophistic
 
 Improving UI/UX: Enhance the Streamlit frontend with more interactive elements or visualizations.
 
-Development Setup
+**Development Setup
 To set up your development environment:
 
-Fork the repository.
+Fork the repository.**
 
 Create a feature branch: git checkout -b feature/your-awesome-feature
 
@@ -222,10 +204,12 @@ Push to the branch: git push origin feature/your-awesome-feature
 
 Open a Pull Request to the main branch.
 
-📄 License
-This project is licensed under the MIT License. You can find the full license text in the LICENSE file in this repository.
+**📄 License**
 
-🙏 Acknowledgments
+This project is licensed under the MIT License. You can find the full license text in the LICENSE file in this repository.
+**
+🙏 Acknowledgments**
+
 LangChain: For the powerful LLM framework.
 
 LangGraph: For the robust agentic workflow capabilities.
