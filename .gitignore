@@ -1,0 +1,43 @@
+# Python specific
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+env/
+venv/  # This ignores your virtual environment folder
+bin/
+include/
+lib/
+local/
+share/
+*.egg-info/
+.tox/
+.ipynb_checkpoints/
+.mypy_cache/
+.pytest_cache/
+htmlcov/
+.coverage
+.coverage.*
+
+# IDEs
+.vscode/ # VS Code specific settings/config (optional, you might want to share some)
+.idea/   # IntelliJ IDEA / PyCharm related files
+
+# Environment variables (CRUCIAL for your API keys!)
+.env     # This ignores your .env file containing API keys
+.env.*local # If you have variations like .env.development.local
+
+# Logs
+*.log
+logs/
+
+# Database files (if you add them later)
+*.db
+*.sqlite3
+
+# Other common temporary or build files
+*.bak
+*.tmp
+*.swp
+*~
