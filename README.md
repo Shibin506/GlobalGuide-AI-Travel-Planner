@@ -33,9 +33,7 @@ The **GlobalGuide AI Travel Planner** is an advanced, AI-powered application des
 
 ## 🏗️ Architecture
 
-The application uses a sophisticated **agentic workflow** built with LangGraph to process user queries and generate travel plans.
 
-```mermaid
 graph TD
     A[User Query (Streamlit)] --> B(AI Agent);
     B -- LangGraph Orchestration --> C{Decide Action};
@@ -46,9 +44,10 @@ graph TD
     F --> A; // Sent back to User (Streamlit)
 🛠️ Available Tools
 The AI agent is equipped with a suite of specialized tools to fulfill diverse planning needs:
-
-**🌤️ Weather Information:
 **
+**🌤️ Weather Information:
+****
+
 get_current_weather: Real-time temperature, conditions, and descriptions for a location.
 
 get_weather_forecast: 5-day weather predictions for trip planning. (Always 5 days as simplified for robustness).
